@@ -1,3 +1,12 @@
+# Q1MB
+
+A project all about taking phoboslab's excellent Q1K3 and stretching it as far as I know how to do.
+
+Will update feature list as content gets developed.
+
+Name is cheeky, I have no size constraints, but it would be cool to hit just under 1MB.
+
+# Q1K3 ORIGINAL README
 # Q1K3 - A JS13k GAME
 
 My entry for the 2021 [js13k](https://js13kgames.com/) competition.
