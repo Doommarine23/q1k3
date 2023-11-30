@@ -1,7 +1,7 @@
 
 let
 model_load_container = async (path) => {
-	/* Parse Retarded Model Format (.rmf):
+	/* Parse (.rmf):
 		struct {
 			u8 num_frames;
 			u8 num_verts; // per frame

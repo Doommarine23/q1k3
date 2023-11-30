@@ -4,7 +4,7 @@
 $script = array_shift($argv);
 
 
-/* Convert Wavefront OBJ to Retarded Model Format (RMF)
+/* Convert Wavefront OBJ to (RMF)
 
 struct {
 	u8 num_frames;
