@@ -105,3 +105,15 @@ class weapon_grenadelauncher_t extends weapon_t {
 		this._projectile_speed = 900;
 	}
 }
+
+class weapon_rocketlauncher_t extends weapon_t {
+	_init() {
+		this._texture = 23;
+		this._model = model_grenadelauncher;
+		this._sound = sfx_grenade_shoot;
+		this._ammo = 10;
+		this._reload = 0.950;
+		this._projectile_type = entity_projectile_rocket_t;
+		this._projectile_speed = 900;
+	}
+}
