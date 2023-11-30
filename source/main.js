@@ -22,6 +22,7 @@ model_torch,
 
 // Weapon view models
 model_shotgun,
+model_super_shotgun,
 model_nailgun,
 model_grenadelauncher,
 
@@ -50,6 +51,9 @@ sfx_plasma_shoot,
 
 sfx_shotgun_shoot,
 sfx_shotgun_reload,
+
+sfx_supershotgun_shoot,
+sfx_supershotgun_reload,
 
 sfx_nailgun_shoot,
 sfx_nailgun_hit,
@@ -103,6 +107,7 @@ game_load = async () => {
 	model_door = model_init(model_data[5], 5, 5, 0.5);
 	
 	model_shotgun = model_init(model_data[2], 1,0.2,0.2);
+	model_supershotgun = model_init(model_data[8], 1,0.2,0.2);
 	model_grenadelauncher = model_init(model_data[2], 0.7,0.4,0.4);
 	model_nailgun = model_init(model_data[6], 0.7,0.7,0.7);
 
@@ -142,6 +147,9 @@ game_load = async () => {
 
 		sfx_shotgun_shoot = audio_create_sound(135, [7,3,0,1,255,1,6,0,0,1,255,1,112,548,1979,11601,255,2,2902,176,2,77,0,0,1,0,10,255,1]);
 		sfx_shotgun_reload = audio_create_sound(125, [9,0,0,1,131,1,0,0,0,0,0,3,255,137,22,1776,255,2,4498,176,2,36,2,84,0,0,3,96,0]);
+
+		sfx_supershotgun_shoot = audio_create_sound(135, [8,0,0,1,65,1,26,0,0,1,127,1,255,297,1234,21759,232,2,1052,255,4,73,3,25,1,0,10,227,1]);
+		sfx_supershotgun_reload = audio_create_sound(55, [9,0,0,1,131,1,0,0,0,0,0,3,255,137,22,1776,255,2,4498,176,2,36,2,84,0,0,3,96,0]);
 
 		sfx_nailgun_shoot = audio_create_sound(130, [7,0,0,1,132,1,8,4,0,1,132,2,162,0,0,8339,232,2,2844,195,2,40,0,0,0,0,0,0,0]);
 		sfx_nailgun_hit = audio_create_sound(135, [8,0,0,1,148,1,0,0,0,0,0,1,255,0,0,2193,128,2,6982,119,2,23,0,0,0,0,0,0,0]);

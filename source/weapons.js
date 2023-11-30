@@ -40,6 +40,7 @@ class weapon_t {
 	}
 }
 
+
 class weapon_shotgun_t extends weapon_t {
 	_init() {
 		this._texture = 7;
@@ -56,6 +57,26 @@ class weapon_shotgun_t extends weapon_t {
 		setTimeout(()=>audio_play(sfx_shotgun_reload), 350);
 		for (let i = 0; i < 8; i++) {
 			super._spawn_projectile(pos, yaw+Math.random()*0.08-0.04, pitch+Math.random()*0.08-0.04);
+		}
+	}
+}
+
+class weapon_super_shotgun_t extends weapon_t {
+	_init() {
+		this._texture = 7;
+		this._model = model_supershotgun;
+		this._sound = sfx_supershotgun_shoot;
+		this._needs_ammo = 0;
+		this._reload = 1.2;
+		this._projectile_type = entity_projectile_shell_t;
+		this._projectile_speed = 10000;
+	}
+
+	_spawn_projectile(pos, yaw, pitch) {
+		setTimeout(()=>audio_play(sfx_supershotgun_reload), 600);
+		setTimeout(()=>audio_play(sfx_supershotgun_reload), 750);
+		for (let i = 0; i < 16; i++) {
+			super._spawn_projectile(pos, yaw+Math.random()*0.16-0.06, pitch+Math.random()*0.12-0.04);
 		}
 	}
 }
